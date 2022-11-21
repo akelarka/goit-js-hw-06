@@ -21,14 +21,12 @@ function createBoxes(amount) {
         el.style.backgroundColor = getRandomHexColor()
         el.style.height = `${i* 10+ minSquareSize}px`
         el.style.width = `${i * 10 + minSquareSize}px` 
-        var lastElInOpeartion = i * 10 + minSquareSize
         boxesDiv.append(el)
     }
-    minSquareSize = 10 + lastElInOpeartion
 
 }
 
 function deleteBoxes() {
-    boxesDiv.remove("div")
+    boxesDiv.innerHTML = ''
     minSquareSize = 30
 }
